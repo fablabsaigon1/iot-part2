@@ -56,10 +56,12 @@ void setup(void){
 
   server.on("/turnon", [](){
     server.send(200, "text/plain", "turn on the LED");
+    digitalWrite(led, 0);
   });
 
   server.on("/turnoff", [](){
     server.send(200, "text/plain", "turn off the LED");
+    digitalWrite(led, 1);
   });
 
   server.onNotFound(handleNotFound);

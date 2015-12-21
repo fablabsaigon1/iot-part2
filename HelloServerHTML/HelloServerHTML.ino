@@ -27,7 +27,6 @@ void handleNotFound(){
 }
 
 void setup(void){
-  pinMode(led, OUTPUT);
   Serial.begin(115200);
   WiFi.begin(ssid, password);
   Serial.println("");
